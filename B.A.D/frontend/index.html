@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Season Selection</title>
+    <title>Season and Player Selection</title>
 </head>
 <body>
     <h1>Select a Season</h1>
@@ -11,15 +11,24 @@
         <option value="">Select a season...</option>
     </select>
 
-    <script>
-        // Get the dropdown element
-        const seasonDropdown = document.getElementById('seasonDropdown');
+    <h1>Select a Player</h1>
+    <select id="playerDropdown">
+        <option value="">Select a player...</option>
+    </select>
 
-        // Fetch seasons from the server and populate the dropdown
+    <div id="averageDataDisplay">
+        <!-- Display average data here -->
+    </div>
+
+    <script>
+        const seasonDropdown = document.getElementById('seasonDropdown');
+        const playerDropdown = document.getElementById('playerDropdown');
+        const averageDataDisplay = document.getElementById('averageDataDisplay');
+
+        // Fetch seasons from the server and populate the season dropdown
         fetch('/api/seasons')
             .then(response => response.json())
             .then(data => {
-                // Loop through the seasons and add options to the dropdown
                 data.forEach(season => {
                     const option = document.createElement('option');
                     option.value = season.id;
@@ -30,6 +39,35 @@
             .catch(error => {
                 console.error('Error fetching seasons:', error);
             });
+
+        // Event listener for season dropdown change
+        seasonDropdown.addEventListener('change', () => {
+            const selectedSeasonId = seasonDropdown.value;
+            if (selectedSeasonId) {
+                // Call the backend API to fetch players for the selected season
+                fetch(`/api/seasons/${selectedSeasonId}/players`)
+                    .then(response => response.json())
+                    .then(players => {
+                        // Clear previous options and add new player options
+                        playerDropdown.innerHTML = '<option value="">Select a player...</option>';
+                        players.forEach(player => {
+                            const option = document.createElement('option');
+                            option.value = player.id;
+                            option.textContent = player.name;
+                            playerDropdown.appendChild(option);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching players for season:', error);
+                    });
+            } else {
+                // Clear player dropdown and average data display
+                playerDropdown.innerHTML = '<option value="">Select a player...</option>';
+                averageDataDisplay.textContent = '';
+            }
+        });
+
+        // ... Rest of the code for player selection and average data display
     </script>
 </body>
 </html>

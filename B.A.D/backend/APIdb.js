@@ -20,7 +20,7 @@ const mockSeasons = [
     },
 ];
 
-async function insertDataFromApiAndMockData() {
+async function insertDataFromApi() {
     const newDbClient = new Client({
         user: 'postgres',
         password: 'your_postgres_password',
@@ -46,13 +46,7 @@ async function insertDataFromApiAndMockData() {
             console.log('External API data inserted into "Seasons" table:', { id, name });
         }
 
-        // Insert mock data
-        for (const season of mockSeasons) {
-            const { id, name } = season;
-            const query = 'INSERT INTO "Seasons" (id, name) VALUES ($1, $2)';
-            await newDbClient.query(query, [id, name]);
-            console.log('Mock data inserted into "Seasons" table:', season);
-        }
+        
     } catch (error) {
         console.error('Error:', error);
     } finally {
@@ -63,7 +57,7 @@ async function insertDataFromApiAndMockData() {
 db.connect()
     .then(() => {
         console.log('Connected to PostgreSQL database');
-        insertDataFromApiAndMockData();
+        insertDataFromApi();
     })
     .catch(err => {
         console.error('Error connecting to PostgreSQL database:', err);
