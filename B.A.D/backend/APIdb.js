@@ -1,54 +1,60 @@
 const { Client } = require('pg');
-const fetch = require('node-fetch');
 
-// PostgreSQL database configuration
 const db = new Client({
     user: 'postgres',
     password: 'your_postgres_password',
     host: 'localhost',
-    port: 5431, // Default PostgreSQL port
+    port: 5431,
     database: 'firstDatabase'
 });
 
-// Connect to the PostgreSQL database
+const mockSeasons = [
+    {
+        id: 'sr:season:1',
+        name: 'Mock Season 1',
+        start_date: '2023-01-01',
+        end_date: '2023-03-31'
+    },
+    {
+        id: 'sr:season:2',
+        name: 'Mock Season 2',
+        start_date: '2023-04-01',
+        end_date: '2023-06-30'
+    },
+    // Add more mock seasons if needed
+];
+
+async function insertMockData() {
+    const newDbClient = new Client({
+        user: 'postgres',
+        password: 'your_postgres_password',
+        host: 'localhost',
+        port: 5431,
+        database: 'firstDatabase'
+    });
+
+    try {
+        await newDbClient.connect();
+
+        for (const season of mockSeasons) {
+            const { id, name} = season;
+
+            const query = 'INSERT INTO "Seasons" (id, name) VALUES ($1, $2)';
+            await newDbClient.query(query, [id, name]);
+            console.log('Mock data inserted into "Seasons" table:', season);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    } finally {
+        await newDbClient.end();
+    }
+}
+
 db.connect()
     .then(() => {
         console.log('Connected to PostgreSQL database');
-        fetchDataAndInsertIntoDatabase(); // Call the function to fetch data and insert into the database
+        insertMockData();
     })
     .catch(err => {
         console.error('Error connecting to PostgreSQL database:', err);
     });
-
-
-
-async function fetchDataAndInsertIntoDatabase() {
-  const apiUrl = "http://api.sportradar.us/darts/trial/v2/en/seasons.json?api_key=b3ah5dwxbswnjzguuhu5q5uj";
-
-  try {
-      const response = await fetch(apiUrl);
-      const apiData = await response.json();
-      const seasons = apiData.seasons;
-
-      // Assuming seasons is an array of season objects
-      for (const season of seasons) {
-          const { id, name, start_date, end_date } = season;
-          console.log(season);
-
-          // Insert data into "Seasons" table
-          /*const query = 'INSERT INTO "Seasons" (id, name, start_date, end_date) VALUES ($1, $2, $3, $4)';
-          await db.query(query, [id, name, start_date, end_date])
-          console.log('Data inserted into "Seasons" table');
-          */
-          
-      }
-  } catch (error) {
-      console.error('Error:', error);
-  } finally {
-      // Close the database connection
-      db.end();
-  }
-}
-
-// Call the function to fetch data and insert into the database
-fetchDataAndInsertIntoDatabase();

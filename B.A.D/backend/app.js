@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const { Client } = require('pg'); // Import PostgreSQL module
+const { Client } = require('pg'); 
 const port = 3000;
+
+
 
 // PostgreSQL database configuration
 const db = new Client({
@@ -31,6 +33,7 @@ app.use((req, res, next) => {
     next();
 });
 
+
 app.get('/', (req, res) => {
     res.send('Welcome to Premier League API');
 });
@@ -48,6 +51,22 @@ app.get('/api/players', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+
+app.get('/api/seasons', async (req, res) => {
+  try {
+      // Retrieve seasons from the PostgreSQL database
+      const query = 'SELECT * FROM "Seasons"';
+      const result = await db.query(query);
+      const seasons = result.rows;
+      res.json(seasons);
+  } catch (err) {
+      console.error('Error fetching seasons from PostgreSQL:', err);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+
+
 
 // Endpoint to retrieve a specific player by ID from the PostgreSQL database
 app.get('/api/players/:id', async (req, res) => {
