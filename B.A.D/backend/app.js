@@ -50,7 +50,7 @@ app.get('/api/seasons', async (req, res) => {
     }
 });
 
-// New endpoint to fetch players for a specific season from the external API
+// Endpoint to fetch players for a specific season from the external API
 app.get('/api/seasons/:seasonId/players', async (req, res) => {
     const { seasonId } = req.params;
     const apiKey = 'b3ah5dwxbswnjzguuhu5q5uj'; // Replace with your actual API key
@@ -69,6 +69,23 @@ app.get('/api/seasons/:seasonId/players', async (req, res) => {
         console.error('Error fetching players from external API:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
+});
+
+
+// Endpoint to fetch player statistics for a specific player
+app.get('/api/seasons/:seasonId/players/:playerId/statistics', async (req, res) => {
+  const { seasonId, playerId } = req.params;
+  const apiKey = 'b3ah5dwxbswnjzguuhu5q5uj';
+  const apiUrl = `http://api.sportradar.us/darts/trial/v2/en/seasons/${seasonId}/competitors/${playerId}/statistics.json?api_key=${apiKey}`;
+
+  try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      res.json(data);
+  } catch (error) {
+      console.error('Error fetching player statistics from external API:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
 });
 
 app.listen(port, () => {
