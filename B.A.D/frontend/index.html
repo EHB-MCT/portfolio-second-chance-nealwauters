@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Premier League Teams</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Selection</title>
 </head>
 <body>
-    <h1>Premier League Teams</h1>
-    <ul id="playerList"></ul>
-    <ul id="seasonList"></ul>
-    <script src="app.js"></script>
+    <h1>Select a Season</h1>
+    <select id="seasonDropdown">
+        <option value="">Select a season...</option>
+    </select>
+
+    <script>
+        // Get the dropdown element
+        const seasonDropdown = document.getElementById('seasonDropdown');
+
+        // Fetch seasons from the server and populate the dropdown
+        fetch('/api/seasons')
+            .then(response => response.json())
+            .then(data => {
+                // Loop through the seasons and add options to the dropdown
+                data.forEach(season => {
+                    const option = document.createElement('option');
+                    option.value = season.id;
+                    option.textContent = season.name;
+                    seasonDropdown.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching seasons:', error);
+            });
+    </script>
 </body>
 </html>
