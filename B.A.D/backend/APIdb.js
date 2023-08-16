@@ -12,16 +12,13 @@ const mockSeasons = [
     {
         id: 'sr:season:1',
         name: 'Mock Season 1',
-        start_date: '2023-01-01',
-        end_date: '2023-03-31'
+        
     },
     {
         id: 'sr:season:2',
         name: 'Mock Season 2',
-        start_date: '2023-04-01',
-        end_date: '2023-06-30'
+    
     },
-    // Add more mock seasons if needed
 ];
 
 async function insertMockData() {
