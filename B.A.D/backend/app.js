@@ -39,9 +39,9 @@ app.get('/', (req, res) => {
 app.get('/api/players', async (req, res) => {
     try {
         // Retrieve players from the PostgreSQL database
-        const query = 'SELECT * FROM "Players"'; // Use double quotes for case-sensitive table name
+        const query = 'SELECT * FROM "Players"';
         const result = await db.query(query);
-        const players = result.rows; // Extract players from the query result
+        const players = result.rows; 
         res.json(players);
     } catch (err) {
         console.error('Error fetching players from PostgreSQL:', err);
@@ -54,11 +54,11 @@ app.get('/api/players/:id', async (req, res) => {
     const playerId = parseInt(req.params.id);
     try {
         // Retrieve player by ID from the PostgreSQL database
-        const query = 'SELECT * FROM "Players" WHERE id = $1'; // Use double quotes for case-sensitive table name
+        const query = 'SELECT * FROM "Players" WHERE id = $1';
         const result = await db.query(query, [playerId]);
 
         if (result.rows.length === 1) {
-            const player = result.rows[0]; // Extract the player from the query result
+            const player = result.rows[0];
             res.json(player);
         } else {
             res.status(404).json({ message: 'Player not found' });

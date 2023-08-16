@@ -1,14 +1,14 @@
 const playerList = document.getElementById("playerList");
 
-console.log("Fetching data from backend..."); // Added console log
+console.log("Fetching data from backend..."); 
 
-fetch("http://localhost:3000/api/players") // Replace with your backend's address
+fetch("http://localhost:3000/api/players") 
     .then(response => {
-        console.log("Response status:", response.status); // Added console log
+        console.log("Response status:", response.status); 
         return response.json();
     })
     .then(data => {
-        console.log("Data fetched successfully:", data); // Added console log
+        console.log("Data fetched successfully:", data);
         data.forEach(player => {
             const listItem = document.createElement("li");
             listItem.textContent = `${player.name} - ${player.country}`;
