@@ -1,51 +1,45 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-
 const app = express();
-const PORT = 3000;
+const cors = require('cors'); 
+const port = 3000;
 
-// In-memory mock database
-let data = [];
+// Mock database of Premier League teams
+const mockDatabase = [
+    { id: 1, name: 'MVG', city: '96' },
+    { id: 2, name: 'GP ', city: '101' },
+    { id: 3, name: 'DVB', city: '91' },
+    // ... add more teams here ...
+];
+// Use the cors middleware
+app.use(cors());
 
-app.use(bodyParser.json());
 
-// GET endpoint to retrieve all data
-app.get('/api/data', (req, res) => {
-  res.json(data);
+// Middleware for logging requests
+app.use((req, res, next) => {
+    console.log(`[${new Date().toLocaleString()}] ${req.method} request to ${req.url}`);
+    next();
 });
 
-// POST endpoint to add new data
-app.post('/api/data', (req, res) => {
-  const newData = req.body;
-  data.push(newData);
-  res.status(201).json(newData);
+app.get('/', (req, res) => {
+    res.send('Welcome to Premier League API');
 });
 
-// PUT endpoint to update existing data
-app.put('/api/data/:id', (req, res) => {
-  const id = req.params.id;
-  const updatedData = req.body;
-
-  if (data[id]) {
-    data[id] = updatedData;
-    res.json(updatedData);
-  } else {
-    res.status(404).json({ message: 'Data not found' });
-  }
+app.get('/api/teams', (req, res) => {
+    res.json(mockDatabase);
 });
 
-// DELETE endpoint to remove data
-app.delete('/api/data/:id', (req, res) => {
-  const id = req.params.id;
-
-  if (data[id]) {
-    data.splice(id, 1);
-    res.json({ message: 'Data deleted' });
-  } else {
-    res.status(404).json({ message: 'Data not found' });
-  }
+app.get('/api/teams/:id', (req, res) => {
+    const teamId = parseInt(req.params.id);
+    const team = mockDatabase.find(team => team.id === teamId);
+    
+    if (team) {
+        res.json(team);
+    } else {
+        res.status(404).json({ message: 'Team not found' });
+    }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
