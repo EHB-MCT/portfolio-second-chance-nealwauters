@@ -2,45 +2,55 @@ body{
   margin: 0;
 }
 
-/* Apply styling to the header */
+
 header {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
+  background-image: url(bg.jpeg); /* Replace with the actual path to your GIF image */
+  background-size: cover;
+  background-position-y: -90px;
+  background-color: rgba(0, 0, 0, 100); /* Adjust the opacity as needed */
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 100px;
   border: none;
 }
 
-/* Center the header text vertically */
-header h1 {
-  margin: 0;
-  line-height: 50px; /* Adjust as needed */
-}
 
 #selection-section {
-  background-color: #00ff00;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Style the select dropdowns */
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+select:focus {
+  outline: none;
 }
-/* Center the dropdowns and their placeholders */
-select {
-  width: 70%; /* Adjust the width as needed */
+
+/* Style the select dropdown for seasons */
+.season-select select {
+  width: 80%; /* Adjust the width as needed */
   padding: 10px;
+  border-color: #fff;
   margin-bottom: 20px;
+  border-radius: 17px;
   text-align: center;
+  background-color:#00000055;
+  color: #fff;
 }
+
 
 /* Make the dropdown options less wide */
 select option {
   width: 100%;
   box-sizing: border-box;
 }
+#player-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+#player1-section,
+#player2-section {
+  width: 45%; /* Adjust as needed */
+}
+

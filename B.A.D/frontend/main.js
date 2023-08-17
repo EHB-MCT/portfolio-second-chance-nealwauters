@@ -86,8 +86,6 @@ function fetchPlayerStatistics(seasonId, playerId) {
     fetch(`/api/seasons/${seasonId}/players/${playerId}/statistics`)
         .then(response => response.json())
         .then(statistics => {
-            console.log('Received statistics:', statistics);
-            // Display player statistics separately in the statisticsDisplay element
             const formattedStatistics = `
                 <p><span class="stat-label" onclick="toggleStat(this)">Average 3 Darts:</span> <span class="stat-value">${statistics.statistics.average_3_darts}</span></p>
                 <p><span class="stat-label" onclick="toggleStat(this)">Checkout Percentage:</span> <span class="stat-value">${statistics.statistics.checkout_percentage}%</span></p>
@@ -98,14 +96,13 @@ function fetchPlayerStatistics(seasonId, playerId) {
                 <p><span class="stat-label" onclick="toggleStat(this)">Scores (140s+):</span> <span class="stat-value">${statistics.statistics.scores_140s_plus}</span></p>
                 <p><span class="stat-label" onclick="toggleStat(this)">Scores (180s):</span> <span class="stat-value">${statistics.statistics.scores_180s}</span></p>
             `;
-            const targetSectionId = playerId === playerDropdown.value ? 'stats-section-player1' : 'stats-section-player2';
-            const targetDiv = document.getElementById(targetSectionId);
-            targetDiv.innerHTML = formattedStatistics;
+            document.getElementById(targetDiv).innerHTML = formattedStatistics;
         })
         .catch(error => {
             console.error('Error fetching player statistics:', error);
         });
 }
+
 
 // Function to toggle the visibility of the stat value
 function toggleStat(statLabel) {
