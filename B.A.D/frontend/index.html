@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Season and Player Selection</title>
+    <title>Interactive Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Select a Season</h1>
-    <select id="seasonDropdown">
-        <option value="">Select a season...</option>
-    </select>
+    <header>
+        <h1>Lorem Ipsum</h1>
+    </header>
 
-    <h1>Select a Player</h1>
-    <select id="playerDropdown">
-        <option value="">Select a player...</option>
-    </select>
+    <section id="content-section">
+        <section id="selection-section">
+            <h2>Select a Season</h2>
+            <select id="seasonDropdown">
+                <option value="">Select a season...</option>
+            </select>
 
-    <h1>Player Statistics</h1>
-    <div id="statistics">
-        <!-- Display player statistics here -->
-    </div>
+            <h2>Select a Player</h2>
+            <select id="playerDropdown">
+                <option value="">Select a player...</option>
+            </select>
+        </section>
 
-    <script src="main.js"></script>
+        <section id="dashboard-section">
+            <section id="stats-section">
+                <h2>Player Statistics</h2>
+                <div id="statistics">
+                    <!-- Display player statistics here -->
+                </div>
+            </section>
+
+            <section id="scene-section">
+                <div id="scene-container">
+                    <canvas id="threeCanvas"></canvas> <!-- Add a canvas for Three.js rendering -->
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script> <!-- Include Three.js via CDN -->
+    <script src="main.js"></script> <!-- Your existing script for displaying stats -->
+    <script src="dashboard.js"></script> <!-- Create a new script for Three.js dashboard -->
 </body>
 </html>

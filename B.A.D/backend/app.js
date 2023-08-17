@@ -35,6 +35,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
+
+
 // Endpoint to retrieve all seasons from the PostgreSQL database
 app.get('/api/seasons', async (req, res) => {
     try {
