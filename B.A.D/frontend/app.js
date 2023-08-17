@@ -13,7 +13,7 @@ fetch("http://localhost:3000/api/players")
         console.log("Players data fetched successfully:", data);
         data.forEach(player => {
             const listItem = document.createElement("li");
-            listItem.textContent = `${player.name} - ${player.country}`;
+            listItem.textContent = `${player.name}`;
             playerList.appendChild(listItem);
         });
     })

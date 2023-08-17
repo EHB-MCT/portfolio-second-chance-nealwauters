@@ -1,6 +1,4 @@
-// main.js
 
-// Get DOM elements
 const seasonDropdown = document.getElementById('seasonDropdown');
 const playerDropdown = document.getElementById('playerDropdown');
 const averageDataDisplay = document.getElementById('averageDataDisplay');
@@ -115,4 +113,4 @@ function clearStatistics() {
     statisticsDisplay.textContent = '';
 }
 
-// ... Rest of your code ...
+

@@ -1,0 +1,84 @@
+/* Background and overlay styles (from your existing code) */
+.background-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1;
+}
+
+
+/* Login form container */
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  margin:  auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for label and input wrapper */
+.input-wrapper {
+  text-align: center; /* Center-align the content */
+  margin-bottom: 10px; /* Add more margin at the bottom */
+}
+
+/* Center the text and adjust input width */
+.input-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+/* Login input field */
+.input-field {
+  width: 80%; /* Adjust width as needed */
+  padding: 10px;
+  margin: 0 auto; /* Center the input fields horizontally */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Login button */
+.login-button {
+  background-color: #fafafa;
+  color: #030303;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Rest of the CSS rules */
