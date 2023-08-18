@@ -26,6 +26,8 @@ db.connect()
 
 // Use the cors middleware
 app.use(cors());
+app.use('/Users/nealwauters/Documents/Be a dart/portfolio-second-chance-nealwauters/B.A.D/frontend/three.min.js', express.static(__dirname + '/Users/nealwauters/Documents/Be a dart/portfolio-second-chance-nealwauters/B.A.D/frontend/three.min.js', { type: 'application/javascript' }));
+
 
 // Serve static files from the frontend folder (adjusting the path)
 app.use(express.static(path.join(__dirname, '../frontend')));
