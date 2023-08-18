@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple Dartboard
+* source:	https://sketchfab.com/3d-models/simple-dartboard-61699f9b3187407eb33ee5035be19489
+* author:	Pichael3000 (https://sketchfab.com/Pichael3000)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple Dartboard" (https://sketchfab.com/3d-models/simple-dartboard-61699f9b3187407eb33ee5035be19489) by Pichael3000 (https://sketchfab.com/Pichael3000) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
