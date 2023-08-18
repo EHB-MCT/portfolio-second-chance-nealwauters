@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
         scene.add(model);
 
         // Position the model
-        model.position.set(160, 150, -190); 
+        model.position.set(160, 90, -270); 
         model.rotation.y = THREE.MathUtils.degToRad(0);
         model.rotation.x = THREE.MathUtils.degToRad(0);
 
