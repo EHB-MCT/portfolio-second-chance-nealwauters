@@ -1,0 +1,11 @@
+Model Information:
+* title:	Winmau Blade 5 Dart Board
+* source:	https://sketchfab.com/3d-models/winmau-blade-5-dart-board-d2c6e78bf0a944c8870bf6db91a4ba22
+* author:	shadowdoggie (https://sketchfab.com/shadowdoggie)
+
+Model License:
+* license type:	CC-BY-ND-4.0 (http://creativecommons.org/licenses/by-nd/4.0/)
+* requirements:	Author must be credited. Modified versions can not be distributed. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Winmau Blade 5 Dart Board" (https://sketchfab.com/3d-models/winmau-blade-5-dart-board-d2c6e78bf0a944c8870bf6db91a4ba22) by shadowdoggie (https://sketchfab.com/shadowdoggie) licensed under CC-BY-ND-4.0 (http://creativecommons.org/licenses/by-nd/4.0/)

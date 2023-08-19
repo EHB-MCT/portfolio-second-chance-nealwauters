@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const { Client } = require('pg'); // Import PostgreSQL module
+const path = require('path');
+const { Client } = require('pg');
+const fetch = require('node-fetch'); // Add this line
 const port = 3000;
 
 // PostgreSQL database configuration
@@ -24,49 +26,70 @@ db.connect()
 
 // Use the cors middleware
 app.use(cors());
+app.use('/Users/nealwauters/Documents/Be a dart/portfolio-second-chance-nealwauters/B.A.D/frontend/three.min.js', express.static(__dirname + '/Users/nealwauters/Documents/Be a dart/portfolio-second-chance-nealwauters/B.A.D/frontend/three.min.js', { type: 'application/javascript' }));
 
-// Middleware for logging requests
-app.use((req, res, next) => {
-    console.log(`[${new Date().toLocaleString()}] ${req.method} request to ${req.url}`);
-    next();
-});
 
+// Serve static files from the frontend folder (adjusting the path)
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Serve the index.html file from the frontend folder (adjusting the path)
 app.get('/', (req, res) => {
-    res.send('Welcome to Premier League API');
+    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
-// Endpoint to retrieve all players from the PostgreSQL database
-app.get('/api/players', async (req, res) => {
+
+
+// Endpoint to retrieve all seasons from the PostgreSQL database
+app.get('/api/seasons', async (req, res) => {
     try {
-        // Retrieve players from the PostgreSQL database
-        const query = 'SELECT * FROM "Players"';
+        // Retrieve seasons from the PostgreSQL database
+        const query = 'SELECT * FROM "Seasons"';
         const result = await db.query(query);
-        const players = result.rows; 
-        res.json(players);
+        const seasons = result.rows;
+        res.json(seasons);
+        console.log(seasons);
     } catch (err) {
-        console.error('Error fetching players from PostgreSQL:', err);
+        console.error('Error fetching seasons from PostgreSQL:', err);
         res.status(500).json({ message: 'Internal server error' });
     }
 });
 
-// Endpoint to retrieve a specific player by ID from the PostgreSQL database
-app.get('/api/players/:id', async (req, res) => {
-    const playerId = parseInt(req.params.id);
-    try {
-        // Retrieve player by ID from the PostgreSQL database
-        const query = 'SELECT * FROM "Players" WHERE id = $1';
-        const result = await db.query(query, [playerId]);
+// Endpoint to fetch players for a specific season from the external API
+app.get('/api/seasons/:seasonId/players', async (req, res) => {
+    const { seasonId } = req.params;
+    const apiKey = 'b3ah5dwxbswnjzguuhu5q5uj'; // Replace with your actual API key
+    const apiUrl = `http://api.sportradar.us/darts/trial/v2/en/seasons/${seasonId}/competitors.json?api_key=${apiKey}`;
 
-        if (result.rows.length === 1) {
-            const player = result.rows[0];
-            res.json(player);
-        } else {
-            res.status(404).json({ message: 'Player not found' });
-        }
-    } catch (err) {
-        console.error('Error fetching player from PostgreSQL:', err);
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        const players = data.season_competitors.map(player => ({
+            id: player.id,
+            name: player.name
+        }));
+        res.json(players);
+        console.log(players)
+    } catch (error) {
+        console.error('Error fetching players from external API:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
+});
+
+
+// Endpoint to fetch player statistics for a specific player
+app.get('/api/seasons/:seasonId/players/:playerId/statistics', async (req, res) => {
+  const { seasonId, playerId } = req.params;
+  const apiKey = 'b3ah5dwxbswnjzguuhu5q5uj';
+  const apiUrl = `http://api.sportradar.us/darts/trial/v2/en/seasons/${seasonId}/competitors/${playerId}/statistics.json?api_key=${apiKey}`;
+
+  try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      res.json(data);
+  } catch (error) {
+      console.error('Error fetching player statistics from external API:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
 });
 
 app.listen(port, () => {
