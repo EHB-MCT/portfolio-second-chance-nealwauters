@@ -1,29 +1,118 @@
+
 import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
 
-
-export function createStatsScene() {
-  console.log('creatingScene');
+export function createNewScene() {
+    const sceneContainer = document.querySelector('.new-scene-container');
+    const canvas = document.getElementById('newSceneCanvas');
     const scene = new THREE.Scene();
 
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
+    // Adjust the field of view for more detail
+    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    // Add ambient light to illuminate the scene
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
 
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    // Add directional light to cast shadows
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(10, 10, 10); // Adjust the light position
+    scene.add(directionalLight);
 
-    return { scene, camera, cube, renderer };
-}
+    const loader = new GLTFLoader();
+    let model;
+    let dart;
 
-export function animateStatsScene(cube, renderer, scene, camera) {
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    
+   
+    
+    // Load the GLB model
+    loader.load('winmau_blade_5_dart_board.glb', (gltf) => {
+        model = gltf.scene;
+        model.scale.set(1, 1, 1); // Adjust the scale factors
 
-    renderer.render(scene, camera);
-    requestAnimationFrame(() => animateStatsScene(cube, renderer, scene, camera));
-}
+        scene.add(model);
+
+        // Position the model
+        model.position.set(470, 40, -900); 
+        model.rotation.y = THREE.MathUtils.degToRad(0);
+        model.rotation.x = THREE.MathUtils.degToRad(0);
+
+        // Camera position for a better view
+        camera.position.set(0, 0, 100);
+        camera.lookAt(0, 0, 0);
+
+        // Render the scene
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.render(scene, camera);
+    });
+     // Load the GLB model
+     loader.load('winmau_blade_5_dart_board.glb', (gltf) => {
+      model = gltf.scene;
+      model.scale.set(1, 1, 1); // Adjust the scale factors
+
+      scene.add(model);
+      
+
+
+
+      // Position the model
+      model.position.set(-470, 40, -900); 
+      model.rotation.y = THREE.MathUtils.degToRad(0);
+      model.rotation.x = THREE.MathUtils.degToRad(0);
+
+      // Camera position for a better view
+      camera.position.set(0, 0, 100);
+      camera.lookAt(0, 0, 0);
+
+      // Render the scene
+      renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.render(scene, camera);
+  });
+
+  loader.load('ImageToStl.com_dart.glb', (gltf) => {
+    dart = gltf.scene;
+  
+    // Add basic material to the model
+    const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    dart.traverse((child) => {
+      if (child.isMesh) {
+        child.material = material;
+      }
+    });
+  
+    dart.scale.set(100, 100, 100);
+    dart.position.set(0, -50, -100);
+    scene.add(dart);
+  
+    // Add OrbitControls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.5;
+    controls.target.set(0, 0, 0);
+  
+    // Automated camera orbit animation
+    const rotateSpeed = 0.01;
+  
+    const animate = () => {
+      dartboard.rotation.y += rotateSpeed; // Rotate the dartboard
+      controls.update(); // Update the controls
+  
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    };
+  
+    animate();
+  });
+
+    // Add scroll event listener
+    let prevScrollPos = window.scrollY;
+    let allowRotation = false;
+    
+
+    return { scene, camera, renderer };
+  }

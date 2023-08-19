@@ -1,4 +1,4 @@
-import { createStatsScene, animateStatsScene } from './statsScene.js';
+import { createNewScene} from './statsScene.js';
 
 
 
@@ -10,6 +10,7 @@ const averageDataDisplay = document.getElementById('averageDataDisplay');
 const statisticsDisplay = document.getElementById('statistics');
 
 //_____FUNCTIONS_____//
+let dartboardScene;
 
 // Function to fetch seasons from the server and populate the season dropdown
 function fetchSeasons() {
@@ -20,7 +21,7 @@ function fetchSeasons() {
                 const option = document.createElement('option');
                 option.value = season.id;
                 option.textContent = season.name;
-                
+
             });
 
             // Fetch players for the first season immediately
@@ -88,13 +89,13 @@ function fetchHeadToHeadData() {
     }
 }
 
-let selectedEvent; 
+let selectedEvent;
 
 
 // Function to fetch specific head2head and its data
 function fetchAndPopulateEvents(competitorId1, competitorId2) {
     const eventsDropdown = document.getElementById('eventsDropdown');
-    
+
     fetch(`/api/head-to-head?competitorId1=${competitorId1}&competitorId2=${competitorId2}`)
         .then(response => response.json())
         .then(data => {
@@ -178,36 +179,16 @@ function fetchAndPopulateEvents(competitorId1, competitorId2) {
                     }
                 }
             });
-
             document.addEventListener('click', function(event) {
-                console.log('Click event detected:', event.target);
                 if (event.target.matches('.dartAverageBtn')) {
-                    const dartAverageValue = selectedEvent.statistics.totals.competitors[0].statistics.average_3_darts;
-                    console.log('Dart Average Value:', dartAverageValue);
-                    if (!statsSceneAnimating) { // Check if animation is not already running
-                        if (!statsScene) { // If the scene hasn't been created yet
-                            statsScene = createStatsScene(); // Create the Three.js scene
-                        }
-
-                        // Extract cube, renderer, scene, and camera from the statsScene
-                        const { cube, renderer, scene, camera } = statsScene;
-
-                        statsSceneAnimating = true; // Set animation flag to true
-
-                        // Start the animation loop
-                        animateStatsScene(cube, renderer, scene, camera);
-                       
-                    }
-            }
-                if (event.target.matches('.checkoutPercBtn')) {
-                   const checkoutPerc = selectedEvent.statistics.totals.competitors[0].statistics.checkout_percentage;
-                   console.log("Checkout %:" , checkoutPerc);
-                    // You can access the required data and perform actions here
+                    // Create the new scene and start animation
+                    createNewScene();
                 }
-
+                // ... Handle other button clicks
             });
             
-        
+
+
         })
         .catch(error => {
             console.error('Error fetching event data:', error);
