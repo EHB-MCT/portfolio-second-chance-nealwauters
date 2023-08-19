@@ -9,17 +9,6 @@ const db = new Client({
     database: 'firstDatabase'
 });
 
-const mockSeasons = [
-    {
-        id: 'sr:season:1',
-        name: 'Mock Season 1',
-    },
-    {
-        id: 'sr:season:2',
-        name: 'Mock Season 2',
-    },
-];
-
 async function insertDataFromApi() {
     const newDbClient = new Client({
         user: 'postgres',

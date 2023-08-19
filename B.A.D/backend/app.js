@@ -54,10 +54,10 @@ app.get('/api/seasons', async (req, res) => {
     }
 });
 
-// Endpoint to fetch players for a specific season from the external API
+// Endpoint to fetch players
 app.get('/api/seasons/:seasonId/players', async (req, res) => {
     const { seasonId } = req.params;
-    const apiKey = 'b3ah5dwxbswnjzguuhu5q5uj'; // Replace with your actual API key
+    const apiKey = '7km8zunmyssn9s288gjtkrng'; // Replace with your actual API key
     const apiUrl = `http://api.sportradar.us/darts/trial/v2/en/seasons/${seasonId}/competitors.json?api_key=${apiKey}`;
 
     try {
@@ -76,21 +76,28 @@ app.get('/api/seasons/:seasonId/players', async (req, res) => {
 });
 
 
-// Endpoint to fetch player statistics for a specific player
-app.get('/api/seasons/:seasonId/players/:playerId/statistics', async (req, res) => {
-  const { seasonId, playerId } = req.params;
-  const apiKey = 'b3ah5dwxbswnjzguuhu5q5uj';
-  const apiUrl = `http://api.sportradar.us/darts/trial/v2/en/seasons/${seasonId}/competitors/${playerId}/statistics.json?api_key=${apiKey}`;
 
-  try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      res.json(data);
-  } catch (error) {
-      console.error('Error fetching player statistics from external API:', error);
-      res.status(500).json({ message: 'Internal server error' });
-  }
+// Endpoint to fetch head-to-head data between two selected players
+app.get('/api/head-to-head', async (req, res) => {
+    const { competitorId1, competitorId2 } = req.query;
+    const apiKey = '7km8zunmyssn9s288gjtkrng';
+    const apiUrl = `http://api.sportradar.us/darts/trial/v2/en/competitors/${competitorId1}/versus/${competitorId2}/summaries.json?api_key=${apiKey}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        res.json(data);
+        console.log(data.last_meetings);
+    } catch (error) {
+        console.error('Error fetching head-to-head data:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
 });
+
+
+
+
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

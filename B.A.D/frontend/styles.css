@@ -1,7 +1,47 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #000000;
   height: 10000px;
+  
+}
+
+:focus{
+  outline:none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dropdown {
+  margin: 10px;
+  padding: 5px;
+}
+
+.events-list {
+  display: flex; /* Display the list horizontally */
+  flex-wrap: wrap; /* Allow items to wrap onto next line */
+  justify-content: center; /* Center the items horizontally */
+  margin: 20px;
+  padding: 0;
+  color: #fff;
+}
+
+.clickable-event {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
 }
 
 .intro-container {
@@ -23,17 +63,25 @@ body {
 }
 
 .intro-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
   position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-  max-width: 40%;
+  top: 60px;
+  left: 200px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
 }
 
-
 .searchTeam {
-  background-image: url(bg.jpeg);
   background-size: cover;
+  background-color: #000000;
   background-position-y: -90px;
   color: #fff;
   text-align: center;
@@ -43,22 +91,22 @@ body {
 
 #selection-section {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 /* Style the select dropdowns */
-.season-select select {
-  width: 80%;
+select {
+  width: 40%;
   padding: 10px;
   border-width: 0.5px;
   border-color: #fff;
+  border-width: 2px;
   margin-bottom: 20px;
   border-radius: 17px;
   text-align: center;
   background-color: #00000055;
   color: #fff;
+  
 }
 
 /* Make the dropdown options less wide */
@@ -69,15 +117,135 @@ select option {
 
 #dashboard-section {
   display: flex;
+  flex-wrap: wrap; /* Allow sections to wrap onto the next line if needed */
   justify-content: space-between;
 }
 
 #stats-section-player1,
 #stats-section-player2 {
+  color: #fff;
   width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#events{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.clickable-event {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-width: 2px;
+  background-color: #00000055;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  border-radius: 17px;
+  border-color: white;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.clickable-event:hover {
+  background-color: #f0eeee88;
+}
+
+.large-scene {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.column {
+  flex: 1;
+  margin: 3px;
+  padding: 0px;
+  background-color: #b11919;
+  height: 500px;
+}
+.column {
+  flex: 1;
+  margin: 3px;
+  padding: 0px;
+  background-color: #b11919;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row; /* Change flex direction to row */
+}
+
+.dartAverageBtn,
+.checkoutPercBtn,
+.tonPlusCheckoutBtn,
+.highestCheckoutBtn,
+.plus100Scores,
+.plus140Scores,
+.maxScore {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dartAverageBtn:hover,
+.checkoutPercBtn:hover,
+.tonPlusCheckoutBtn:hover,
+.highestCheckoutBtn:hover,
+.plus100Scores:hover,
+.plus140Scores:hover,
+.maxScore:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  display: inline-block;
+}
 
 
+
+.expanded {
+  white-space: normal !important; /* Display full content */
+}
+.stats-button {
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.stats-button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Hide the content of the list items by default */
+.stats-button li {
+  display: none;
+}
+
+/* Show the content of the list items when expanded class is added */
+.stats-button.expanded li {
+  display: block;
+}
+
+/* Style for the hidden content within list items */
+.stats-button li.hidden {
+  display: none;
+}
+
+/* Style for the expanded content within list items */
+.stats-button li.expanded {
+  display: list-item; /* or display: block; */
+}

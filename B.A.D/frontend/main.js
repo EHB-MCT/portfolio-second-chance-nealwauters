@@ -1,3 +1,7 @@
+import { createStatsScene, animateStatsScene } from './statsScene.js';
+
+
+
 const seasonDropdown = document.getElementById('seasonDropdown');
 const playerDropdown = document.getElementById('playerDropdown');
 const playerDropdown2 = document.getElementById('playerDropdown2');
@@ -5,29 +9,7 @@ const playerDropdown2 = document.getElementById('playerDropdown2');
 const averageDataDisplay = document.getElementById('averageDataDisplay');
 const statisticsDisplay = document.getElementById('statistics');
 
-// Fetch seasons and populate the season dropdown
-fetchSeasons();
-
-// Event listener for season dropdown change
-seasonDropdown.addEventListener('change', handleSeasonSelection);
-
-// Event listener for player dropdown change
-playerDropdown.addEventListener('change', handlePlayerSelection);
-playerDropdown2.addEventListener('change', handlePlayerSelection); 
-
-// Function to handle player selection
-function handlePlayerSelection() {
-    const selectedPlayerId = playerDropdown.value;
-    const selectedPlayerId2 = playerDropdown2.value;
-    const selectedSeasonId = seasonDropdown.value;
-
-    if (selectedPlayerId && selectedPlayerId2 && selectedSeasonId) {
-        fetchPlayerStatistics(selectedSeasonId, selectedPlayerId);
-    } else {
-        clearStatistics();
-    }
-}
-
+//_____FUNCTIONS_____//
 
 // Function to fetch seasons from the server and populate the season dropdown
 function fetchSeasons() {
@@ -38,91 +20,56 @@ function fetchSeasons() {
                 const option = document.createElement('option');
                 option.value = season.id;
                 option.textContent = season.name;
-                seasonDropdown.appendChild(option);
+                
             });
+
+            // Fetch players for the first season immediately
+            const firstSeasonId = data[0].id; // Get the ID of the first season
+            fetchPlayers(firstSeasonId);
         })
         .catch(error => {
             console.error('Error fetching seasons:', error);
         });
 }
-
-// Function to handle season selection
-function handleSeasonSelection() {
-    const selectedSeasonId = seasonDropdown.value;
-    if (selectedSeasonId) {
-        fetchPlayers(selectedSeasonId);
+// Function to format a name from "Last, First" to "First Last"
+function formatName(name) {
+    const nameParts = name.split(',');
+    if (nameParts.length === 2) {
+        return nameParts[1].trim() + ' ' + nameParts[0].trim();
     } else {
-        clearPlayerDropdown();
-        clearAverageData();
-        clearStatistics();
+        return name; // Return the original name if formatting fails
     }
 }
-
 // Function to fetch players for the selected season
 function fetchPlayers(seasonId) {
-    fetch(`/api/seasons/${seasonId}/players`)
-        .then(response => response.json())
-        .then(players => {
-            clearPlayerDropdown();
-            clearPlayerDropdown2();
-            players.forEach(player => {
-                const option = document.createElement('option');
-                option.value = player.id;
-                option.textContent = player.name;
-                playerDropdown.appendChild(option);
-                playerDropdown2.appendChild(option.cloneNode(true));
+    if (seasonId) {
+        fetch(`/api/seasons/${seasonId}/players`)
+            .then(response => response.json())
+            .then(players => {
+                clearPlayerDropdown();
+                clearPlayerDropdown2();
+                players.forEach(player => {
+                    const option = document.createElement('option');
+                    option.value = player.id;
+                    option.textContent = formatName(player.name);
+                    playerDropdown.appendChild(option);
+                    playerDropdown2.appendChild(option.cloneNode(true));
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching players for season:', error);
             });
-        })
-        .catch(error => {
-            console.error('Error fetching players for season:', error);
-        });
+    }
 }
-
-
-// Function to fetch statistics for the selected player
-function fetchPlayerStatistics(seasonId, playerId) {
-    const targetDiv = playerId === playerDropdown.value ? 'statisticsPlayer1' : 'statisticsPlayer2';
-
-    fetch(`/api/seasons/${seasonId}/players/${playerId}/statistics`)
-        .then(response => response.json())
-        .then(statistics => {
-            const formattedStatistics = `
-                <p><span class="stat-label" onclick="toggleStat(this)">Average 3 Darts:</span> <span class="stat-value">${statistics.statistics.average_3_darts}</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Checkout Percentage:</span> <span class="stat-value">${statistics.statistics.checkout_percentage}%</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Checkouts:</span> <span class="stat-value">${statistics.statistics.checkouts}</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Checkouts (100s+):</span> <span class="stat-value">${statistics.statistics.checkouts_100s_plus}</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Highest Checkout:</span> <span class="stat-value">${statistics.statistics.highest_checkout}</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Scores (100s+):</span> <span class="stat-value">${statistics.statistics.scores_100s_plus}</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Scores (140s+):</span> <span class="stat-value">${statistics.statistics.scores_140s_plus}</span></p>
-                <p><span class="stat-label" onclick="toggleStat(this)">Scores (180s):</span> <span class="stat-value">${statistics.statistics.scores_180s}</span></p>
-            `;
-            document.getElementById(targetDiv).innerHTML = formattedStatistics;
-        })
-        .catch(error => {
-            console.error('Error fetching player statistics:', error);
-        });
-}
-
-
-// Function to toggle the visibility of the stat value
-function toggleStat(statLabel) {
-    const statValue = statLabel.nextElementSibling;
-    statValue.classList.toggle('hidden');
-}
-
 
 // Function to clear player dropdown
 function clearPlayerDropdown() {
     playerDropdown.innerHTML = '<option value="">Select a player...</option>';
 }
+
 // Function to clear the second player dropdown
 function clearPlayerDropdown2() {
     playerDropdown2.innerHTML = '<option value="">Select another player...</option>';
-}
-
-// Function to clear average data display
-function clearAverageData() {
-    averageDataDisplay.textContent = '';
 }
 
 // Function to clear statistics display
@@ -131,21 +78,167 @@ function clearStatistics() {
     document.getElementById('statisticsPlayer2').innerHTML = '';
 }
 
-playerDropdown.addEventListener('change', function() {
-    const selectedPlayerId = playerDropdown.value;
-    if (selectedPlayerId && seasonDropdown.value) {
-        fetchPlayerStatistics(seasonDropdown.value, selectedPlayerId);
-    } else {
-        clearStatistics();
-    }
-});
+// Function for fetching all head-to-heads data and populating events list
+function fetchHeadToHeadData() {
+    const competitorId1 = playerDropdown.value;
+    const competitorId2 = playerDropdown2.value;
 
-playerDropdown2.addEventListener('change', function() {
-    const selectedPlayerId2 = playerDropdown2.value;
-    if (selectedPlayerId2 && seasonDropdown.value) {
-        fetchPlayerStatistics(seasonDropdown.value, selectedPlayerId2);
-    } else {
-        clearStatistics();
+    if (competitorId1 && competitorId2) {
+        fetchAndPopulateEvents(competitorId1, competitorId2);
     }
-});
+}
+
+let selectedEvent; 
+
+
+// Function to fetch specific head2head and its data
+function fetchAndPopulateEvents(competitorId1, competitorId2) {
+    const eventsDropdown = document.getElementById('eventsDropdown');
+    
+    fetch(`/api/head-to-head?competitorId1=${competitorId1}&competitorId2=${competitorId2}`)
+        .then(response => response.json())
+        .then(data => {
+            const lastMeetings = data.last_meetings;
+            console.log(lastMeetings);
+
+            // Clear existing events
+            eventsDropdown.innerHTML = '';
+
+            lastMeetings.forEach((event, index) => {
+                // Check if the event data and required fields are available
+                if (
+                    event.sport_event &&
+                    event.sport_event.sport_event_context &&
+                    event.sport_event.sport_event_context.competition &&
+                    event.sport_event.sport_event_context.competition.name &&
+                    event.statistics &&
+                    event.statistics.totals &&
+                    event.statistics.totals.competitors &&
+                    event.statistics.totals.competitors.length >= 2 &&
+                    event.statistics.totals.competitors[0] &&
+                    event.statistics.totals.competitors[0].statistics &&
+                    event.statistics.totals.competitors[0].statistics.average_3_darts &&
+                    event.statistics.totals.competitors[1] &&
+                    event.statistics.totals.competitors[1].statistics &&
+                    event.statistics.totals.competitors[1].statistics.average_3_darts &&
+                    event.sport_event.start_time
+                ) {
+                    const eventOption = document.createElement('option');
+                    eventOption.value = index;
+                    const eventDate = new Date(event.sport_event.start_time);
+                    const formattedDate = eventDate.toISOString().split('T')[0]; // Extract the date part
+                    const battles = event.sport_event.sport_event_context.competition.name + ' ' + formattedDate;
+                    eventOption.textContent = battles;
+                    eventOption.classList.add('clickable-event');
+                    eventsDropdown.appendChild(eventOption);
+                } else {
+                    console.log("no stats for other matchups");
+                }
+            });
+
+            eventsDropdown.addEventListener('change', () => {
+                const selectedEventIndex = eventsDropdown.value;
+                if (selectedEventIndex !== '') {
+                    selectedEvent = lastMeetings[selectedEventIndex];
+                    // Check if selectedEvent has the necessary data before accessing its properties
+                    if (
+                        selectedEvent.sport_event &&
+                        selectedEvent.sport_event.competitors &&
+                        selectedEvent.sport_event.competitors[0] &&
+                        selectedEvent.sport_event.competitors[1]
+                    ) {
+                        const player1FormattedName = formatName(selectedEvent.sport_event.competitors[0].name);
+                        const player2FormattedName = formatName(selectedEvent.sport_event.competitors[1].name);
+
+                        const player1Stats = `
+                      
+                       
+                             <button class="dartAverageBtn"> 3 Dart Average </button> 
+                             <button class="checkoutPercBtn"> Checkout Percentage </button>
+                             <button class="tonPlusCheckoutBtn"> 100+ Checkouts </button>
+                             <button class="highestCheckoutBtn">Highest Checkout </button>
+                             <button class="plus100Scores"> +100 Scores </button>
+                             <button class="plus140Scores"> +140 Scores </button> 
+                             <button class="maxScore">180's</button> 
+
+                        </ul>
+                        `;
+
+                        const player2Stats = `
+                        <h3>${player2FormattedName} </h3>
+                        
+                        `;
+
+                        console.log(player1Stats);
+                        console.log(player2Stats);
+
+                        displayEventData(player1Stats, player2Stats);
+                    } else {
+                        console.log('Invalid event data:', selectedEvent);
+                    }
+                }
+            });
+
+            document.addEventListener('click', function(event) {
+                console.log('Click event detected:', event.target);
+                if (event.target.matches('.dartAverageBtn')) {
+                    const dartAverageValue = selectedEvent.statistics.totals.competitors[0].statistics.average_3_darts;
+                    console.log('Dart Average Value:', dartAverageValue);
+                    if (!statsSceneAnimating) { // Check if animation is not already running
+                        if (!statsScene) { // If the scene hasn't been created yet
+                            statsScene = createStatsScene(); // Create the Three.js scene
+                        }
+
+                        // Extract cube, renderer, scene, and camera from the statsScene
+                        const { cube, renderer, scene, camera } = statsScene;
+
+                        statsSceneAnimating = true; // Set animation flag to true
+
+                        // Start the animation loop
+                        animateStatsScene(cube, renderer, scene, camera);
+                       
+                    }
+            }
+                if (event.target.matches('.checkoutPercBtn')) {
+                   const checkoutPerc = selectedEvent.statistics.totals.competitors[0].statistics.checkout_percentage;
+                   console.log("Checkout %:" , checkoutPerc);
+                    // You can access the required data and perform actions here
+                }
+
+            });
+            
+        
+        })
+        .catch(error => {
+            console.error('Error fetching event data:', error);
+        });
+}
+//Function to display right data
+function displayEventData(player1Stats, player2Stats) {
+    const player1StatsDisplay = document.getElementById('player1StatsDisplay');
+    //const player2StatsDisplay = document.getElementById('player2StatsDisplay');
+
+    if (player1Stats && player2Stats) {
+        player1StatsDisplay.innerHTML = player1Stats;
+        //player2StatsDisplay.innerHTML = player2Stats;
+    }
+}
+
+let statsScene;
+
+// Create a variable to track if the stats scene animation is active
+let statsSceneAnimating = false;
+
+
+
+
+// Add event listeners to the competitor dropdowns
+document.getElementById('playerDropdown').addEventListener('change', fetchHeadToHeadData);
+document.getElementById('playerDropdown2').addEventListener('change', fetchHeadToHeadData);
+
+
+// Fetch seasons And Players
+fetchSeasons();
+fetchPlayers(); // 
+
 

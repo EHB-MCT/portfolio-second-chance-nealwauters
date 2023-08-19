@@ -12,7 +12,7 @@
             <canvas id="threeCanvas"></canvas>
             <div class="intro-text">
                 <h1>Welcome to Your Dart Buddy</h1>
-                <p>Take a deeper look into the greatest showdowns that the dart world has seen</p>
+                <p>Choose a season and see how your favorite players would match up to each other</p>
             </div>
         </div>
     </div>
@@ -24,7 +24,6 @@
                 <option value="">Select a player...</option>
             </select>
             <div id="statisticsPlayer1">
-                <!-- Display player 1 statistics here -->
             </div>
         </section>
 
@@ -45,21 +44,43 @@
         </select>
     </div>
 
-    <div class="column" id="column1">
-        <div id="player1StatsDisplay">
-            <!-- Player 1 stats will be displayed here -->
+    <div class="large-scene">
+        <!-- Buttons for Player 1 -->
+        <div class="column" id="column1">
+            <div id="player1StatsDisplay">
+                <h3>van Gerwen, Michael</h3>
+                <ul>
+
+                    <li> <button>3 Dart Average:</button></li>
+         
+                </ul>            
+            </div>
+        </div>
+        
+        <!-- Scene for Player 1 stats -->
+        <div class="column" id="column2">
+            <canvas id="player1Canvas"></canvas>
+        </div>
+        
+        <!-- Scene for Player 2 stats -->
+        <div class="column" id="column3">
+            <canvas id="player2Canvas"></canvas>
+        </div>
+        
+        <!-- Buttons for Player 2 -->
+        <div class="column" id="column4">
+            <div id="player2StatsDisplay">
+                <!-- Player 1 stats will be displayed here -->
+            </div>
+            <!-- Player 2 stats will be displayed here -->
         </div>
     </div>
-    <div id="threejs-container">
 
-
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script type="module" src="intro.js"></script>
-    <script type="module" src="statsScene.js"></script>
-    <script type="module" src="main.js"></script>
-   
+    <script src="main.js"></script>
+    <script type="module" src="cubeScenes.js"></script>
 
     <!--<script type="module" src="statsScene.js"></script>!-->
 </body>

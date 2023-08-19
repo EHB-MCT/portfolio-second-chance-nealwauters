@@ -1,6 +1,11 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
 
+// Reload the page at the top
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
 // Wait for the DOM to load before initializing the scene
 window.addEventListener('DOMContentLoaded', () => {
     const sceneContainer = document.querySelector('.intro-scene');
@@ -31,8 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
         scene.add(model);
 
         // Position the model
-        model.position.set(160, 90, -270); 
-        model.rotation.y = THREE.MathUtils.degToRad(0);
+        model.position.set(160, 140, -330); 
+        model.rotation.y = THREE.MathUtils.degToRad(-10);
         model.rotation.x = THREE.MathUtils.degToRad(0);
 
         // Camera position for a better view
@@ -47,8 +52,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Add scroll event listener
     let prevScrollPos = window.scrollY;
+    let allowRotation = false;
     window.addEventListener('scroll', () => {
-        if (model) {
+        if (!allowRotation) {
+            // Calculate the scroll position at which rotation should start
+            const startScrollPos = sceneContainer.offsetTop - window.innerHeight * 0.5;
+            if (window.scrollY >= startScrollPos) {
+                allowRotation = true;
+            }
+        }
+
+        if (allowRotation && model) {
             // Calculate rotation based on scroll position
             const rotationSpeed = 0.005;
             const scrollPos = window.scrollY;
@@ -62,4 +76,5 @@ window.addEventListener('DOMContentLoaded', () => {
             renderer.render(scene, camera);
         }
     });
+    
 });
