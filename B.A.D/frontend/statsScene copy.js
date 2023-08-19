@@ -38,8 +38,8 @@ export function createNewScene() {
     model.rotation.x = THREE.MathUtils.degToRad(0);
 
     // Camera position for a better view
-    camera.position.set(0, 50, 700); // Adjust the camera position
-    camera.lookAt(0, 0, 0);
+    camera.position.set(0, 0, 800); // Adjust the camera position
+    camera.lookAt(0, 80, 80);
 
 
     // Render the scene
@@ -86,7 +86,9 @@ export function createNewScene() {
     scene.add(dart);
 
     // Define the target position for the dart's tip
-    const targetDartPosition = generateRandomPositionInSingle20Area1(); // Adjusted target position at the tip of the dart
+    
+    const targetDartPosition = randomPositionInSection20;
+    //const targetDartPosition = generateRandomPositionInSingle20Area1(); // Adjusted target position at the tip of the dart
     const throwDuration = 1000; // Duration of the throwing motion in milliseconds
     let elapsedTime = 0;
 
@@ -126,20 +128,28 @@ export function createNewScene() {
 
   return { scene, camera, renderer };
 }
-// Generate a random position within Single 20 Area 1
-function generateRandomPositionInSingle20Area1() {
-  // Define the bounds of Single 20 Area 1
-  const minX = -11;
-  const maxX = 11;
-  const minY = 15;
-  const maxY = 76;
+// Define triangle vertices for section 20
+const section20VertexA = new THREE.Vector3(13, 125, 90);
+const section20VertexB = new THREE.Vector3(-13, 125, 90);
+const section20VertexC = new THREE.Vector3(0, 20, 90);
 
-  // Generate random coordinates within the bounds
-  const randomX = THREE.MathUtils.randFloat(minX, maxX);
-  const randomY = THREE.MathUtils.randFloat(minY, maxY);
-  const randomZ = 50; // Fixed Z coordinate for the dartboard
+function generateRandomPositionInSection20() {
+  const u = Math.random();
+  const v = Math.random();
 
-  return new THREE.Vector3(randomX, randomY, randomZ);
+  const point = new THREE.Vector3();
+  point.x = (1 - Math.sqrt(u)) * section20VertexA.x + Math.sqrt(u) * (1 - v) * section20VertexB.x + Math.sqrt(u) * v * section20VertexC.x;
+  point.y = (1 - Math.sqrt(u)) * section20VertexA.y + Math.sqrt(u) * (1 - v) * section20VertexB.y + Math.sqrt(u) * v * section20VertexC.y;
+  point.z = section20VertexA.z;
+
+  return point;
 }
+
+
+// Example usage:
+const randomPositionInSection20 = generateRandomPositionInSection20();
+console.log("Random position in Section 20:", randomPositionInSection20);
+
+
 
 createNewScene();
