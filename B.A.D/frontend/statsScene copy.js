@@ -209,7 +209,7 @@ export function createNewScene() {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.render(scene, camera);
   });
-
+  // Load the Dart and all his functionalities
   loader.load('ImageToStl.com_dart.glb', (gltf) => {
     dart = gltf.scene;
 
@@ -255,66 +255,85 @@ export function createNewScene() {
 
     // Define the target position for the dart's tip
     const targetDartPosition = randomPosition;
+    //const targetDartPosition = new THREE.Vector3(0, 80, 90 )
+   
 
 
     // Add the dart to the scene
     scene.add(dart);
 
-    // Define the target position for the dart's tip
+
 
 
     const throwDuration = 1500;
     let elapsedTime = 0;
+    let isAnimating = true;  
+
+    // Animation loop
+const animate = (timestamp) => {
+  if (!isAnimating) return;
+  const deltaTime = timestamp - elapsedTime;
+  elapsedTime = timestamp;
+
+  // Calculate the progress of the throwing motion
+  const progress = THREE.MathUtils.clamp(elapsedTime / throwDuration, 0, 1);
+
+  // Calculate the throwing arc based on a sine function
+  const throwingArcProgress = Math.sin(progress * Math.PI);
+  const throwingArcHeight = 80; // Adjust the throwing arc height
+
+  // Calculate the intermediate position with the throwing arc
+  const throwPosition = new THREE.Vector3().copy(initialPosition).lerp(targetDartPosition, progress);
+  throwPosition.y += throwingArcHeight * throwingArcProgress; // Add the throwing arc height
+
+  // Calculate the rotation for this frame (maintain consistent rotation)
+  const throwRotation = targetDartRotation.clone();
+
+  // Apply the calculated position to the dart
+  dart.position.copy(throwPosition);
+
+  // Rotate the dart around itself
+  dart.rotation.z += 0.1; // Adjust the rotation speed as needed
+
+  if (progress === 1) {
+    // Calculate the distance between the dart's position and the origin
+    const dartPosition = dart.position.clone();
+    const distanceToOrigin = calculateDistanceToOrigin(dartPosition);
+
+    // Define the multiplication factors and distance ranges
+    const factorInRange1 = 3; // Multiply if distance is between range1
+    const factorInRange2 = 2; // Multiply if distance is between range2
+    const range1Min = 117;
+    const range1Max = 122;
+    const range2Min = 152;
+    const range2Max = 156;
+
+    let finalValue = randomSectionValue; // Default value
+
+    if (distanceToOrigin >= range1Min && distanceToOrigin <= range1Max) {
+      finalValue *= factorInRange1;
+    } else if (distanceToOrigin >= range2Min && distanceToOrigin <= range2Max) {
+      finalValue *= factorInRange2;
+    }
+
+    console.log(`Distance to origin: ${distanceToOrigin}`);
+    console.log(`Final value after distance adjustment: ${finalValue}`);
 
 
+    console.log(`Dart landed at section ${closestSectionKey} with value ${landedSection.value}, multiplied value: ${multipliedValue}`);
+    isAnimating = false;
 
-    // Animation looP
-    const animate = (timestamp) => {
-      const deltaTime = timestamp - elapsedTime;
-      elapsedTime = timestamp;
+  }
 
-      // Calculate the progress of the throwing motion
-      const progress = THREE.MathUtils.clamp(elapsedTime / throwDuration, 0, 1);
+  // Apply the calculated rotation to the dart
+  dart.rotation.copy(throwRotation);
 
-      // Calculate the throwing arc based on a sine function
-      const throwingArcProgress = Math.sin(progress * Math.PI);
-      const throwingArcHeight = 80; // Adjust the throwing arc height
-
-      // Calculate the intermediate position with the throwing arc
-      const throwPosition = new THREE.Vector3().copy(initialPosition).lerp(targetDartPosition, progress);
-      throwPosition.y += throwingArcHeight * throwingArcProgress; // Add the throwing arc height
-
-      // Calculate the rotation for this frame (maintain consistent rotation)
-      const throwRotation = targetDartRotation.clone();
-
-      // Apply the calculated position to the dart
-      dart.position.copy(throwPosition);
-
-      // Rotate the dart around itself
-      dart.rotation.z += 0.1; // Adjust the rotation speed as needed
-
-
-
-      if (progress === 1) {
-        // Calculate the distance between the dart's position and the origin
-        const dartPosition = dart.position.clone();
-        const distanceToOrigin = calculateDistanceToOrigin(dartPosition);
-
-        // Display the distance (you can replace this with your own logic)
-        console.log(`Distance to origin: ${distanceToOrigin}`);
-      }
-
-      // Apply the calculated rotation to the dart
-      dart.rotation.copy(throwRotation);
-
-      renderer.render(scene, camera);
-      requestAnimationFrame(animate);
-
-
-
-
-
-    };
+  renderer.render(scene, camera);
+  if (isAnimating) {
+    requestAnimationFrame(animate);
+  }
+};
+    
     dart.position.copy(initialPosition);
     dart.rotation.copy(initialRotation);
 
