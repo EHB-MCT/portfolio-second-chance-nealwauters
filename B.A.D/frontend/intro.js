@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Position the model
         model.position.set(160, 140, -330); 
-        model.rotation.y = THREE.MathUtils.degToRad(-10);
+        model.rotation.y = THREE.MathUtils.degToRad(24);
         model.rotation.x = THREE.MathUtils.degToRad(0);
 
         // Camera position for a better view
