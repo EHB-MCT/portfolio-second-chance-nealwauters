@@ -1,5 +1,3 @@
-import { createNewScene} from './statsScene.js';
-
 
 
 const seasonDropdown = document.getElementById('seasonDropdown');
@@ -154,7 +152,7 @@ function fetchAndPopulateEvents(competitorId1, competitorId2) {
                         const player1Stats = `
                       
                        
-                             <button class="dartAverageBtn"> 3 Dart Average </button> 
+                             <button class="dartAverageBtn" id"dartAverageBtn"> 3 Dart Average </button> 
                              <button class="checkoutPercBtn"> Checkout Percentage </button>
                              <button class="tonPlusCheckoutBtn"> 100+ Checkouts </button>
                              <button class="highestCheckoutBtn">Highest Checkout </button>
@@ -173,19 +171,14 @@ function fetchAndPopulateEvents(competitorId1, competitorId2) {
                         console.log(player1Stats);
                         console.log(player2Stats);
 
-                        displayEventData(player1Stats, player2Stats);
+                        //isplayEventData(player1Stats, player2Stats);
                     } else {
                         console.log('Invalid event data:', selectedEvent);
                     }
                 }
             });
-            document.addEventListener('click', function(event) {
-                if (event.target.matches('.dartAverageBtn')) {
-                    // Create the new scene and start animation
-                    createNewScene();
-                }
-                // ... Handle other button clicks
-            });
+      
+    
             
 
 
@@ -216,6 +209,7 @@ let statsSceneAnimating = false;
 // Add event listeners to the competitor dropdowns
 document.getElementById('playerDropdown').addEventListener('change', fetchHeadToHeadData);
 document.getElementById('playerDropdown2').addEventListener('change', fetchHeadToHeadData);
+
 
 
 // Fetch seasons And Players

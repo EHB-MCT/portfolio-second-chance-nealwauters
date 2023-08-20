@@ -23,6 +23,7 @@ db.connect()
     .catch(err => {
         console.error('Error connecting to PostgreSQL database:', err);
     });
+    
 
 // Use the cors middleware
 app.use(cors());
@@ -30,11 +31,11 @@ app.use('/Users/nealwauters/Documents/Be a dart/portfolio-second-chance-nealwaut
 
 
 // Serve static files from the frontend folder (adjusting the path)
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '../frontend/Src')));
 
 // Serve the index.html file from the frontend folder (adjusting the path)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/s', 'index.html'));
 });
 
 

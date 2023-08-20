@@ -6,7 +6,6 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 
 
 
-
 export function createNewScene() {
   const canvas = document.getElementById('newSceneCanvas');
   const scene = new THREE.Scene();
@@ -267,10 +266,20 @@ export function createNewScene() {
 
     const throwDuration = 1500;
     let elapsedTime = 0;
-    let isAnimating = true;  
+    let isAnimating = false;
+
+    document.getElementById('animateButton').addEventListener('click', () => {
+      if (!isAnimating) {
+        animate();
+        isAnimating = true;
+      }
+      animate();
+    });
+    
 
     // Animation loop
 const animate = (timestamp) => {
+  console.log('animation running');
   if (!isAnimating) return;
   const deltaTime = timestamp - elapsedTime;
   elapsedTime = timestamp;
@@ -340,7 +349,6 @@ const animate = (timestamp) => {
     animate();
 
 
-    // Choose a random section key from the vertices object
 
 
 
@@ -366,11 +374,6 @@ function generateRandomPositionInSection(vertices) {
   return point
 
 }
-
-
-
-
-
 
 
 createNewScene();
