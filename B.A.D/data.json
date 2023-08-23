@@ -1,0 +1,3139 @@
+{
+    "generated_at": "2023-08-22T17:23:50+00:00",
+    "summaries": [{
+        "sport_event": {
+            "id": "sr:sport_event:42117337",
+            "start_time": "2023-07-16T20:35:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:689",
+                    "name": "World Matchplay",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:107371",
+                    "name": "World Matchplay 2023",
+                    "start_date": "2023-07-15",
+                    "end_date": "2023-07-23",
+                    "year": "2023",
+                    "competition_id": "sr:competition:689"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-07-15",
+                    "end_date": "2023-07-23",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_32"
+                },
+                "groups": [{
+                    "id": "sr:cup:150253",
+                    "name": "World Matchplay 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:32762",
+                "name": "Dolan, Brendan",
+                "abbreviation": "DOL",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 7,
+            "away_score": 10,
+            "winner_id": "sr:competitor:32762",
+            "period_scores": [{
+                "home_score": 7,
+                "away_score": 10,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 98.98,
+                        "checkout_percentage": 38.89,
+                        "checkouts": 7,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 137,
+                        "scores_100s_plus": 20,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:32762",
+                    "name": "Dolan, Brendan",
+                    "abbreviation": "DOL",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 95.5,
+                        "checkout_percentage": 37.04,
+                        "checkouts": 10,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 82,
+                        "scores_100s_plus": 28,
+                        "scores_140s_plus": 9,
+                        "scores_180s": 3
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:42165733",
+            "start_time": "2023-07-08T20:30:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:39527",
+                    "name": "Poland Darts Masters 2023",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:103993",
+                    "name": "Poland Darts Masters 2023 2023",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023",
+                    "competition_id": "sr:competition:39527"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "final"
+                },
+                "groups": [{
+                    "id": "sr:cup:145957",
+                    "name": "Poland Darts Masters 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:136790",
+                "name": "van den Bergh, Dimitri",
+                "abbreviation": "VDB",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 3,
+            "away_score": 8,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 3,
+                "away_score": 8,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:136790",
+                    "name": "van den Bergh, Dimitri",
+                    "abbreviation": "VDB",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 101.07,
+                        "checkout_percentage": 60,
+                        "checkouts": 3,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 84,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 5
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 113.22,
+                        "checkout_percentage": 47.06,
+                        "checkouts": 8,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 92,
+                        "scores_100s_plus": 14,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 6
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:42165727",
+            "start_time": "2023-07-08T19:45:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:39527",
+                    "name": "Poland Darts Masters 2023",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:103993",
+                    "name": "Poland Darts Masters 2023 2023",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023",
+                    "competition_id": "sr:competition:39527"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:145957",
+                    "name": "Poland Darts Masters 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:35936",
+                "name": "Smith, Michael",
+                "abbreviation": "SMI",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 3,
+            "away_score": 7,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 3,
+                "away_score": 7,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:35936",
+                    "name": "Smith, Michael",
+                    "abbreviation": "SMI",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 98.01,
+                        "checkout_percentage": 33.33,
+                        "checkouts": 3,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 155,
+                        "scores_100s_plus": 8,
+                        "scores_140s_plus": 7,
+                        "scores_180s": 5
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 104.02,
+                        "checkout_percentage": 63.64,
+                        "checkouts": 7,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 77,
+                        "scores_100s_plus": 8,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 5
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:42165527",
+            "start_time": "2023-07-08T18:40:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:39527",
+                    "name": "Poland Darts Masters 2023",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:103993",
+                    "name": "Poland Darts Masters 2023 2023",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023",
+                    "competition_id": "sr:competition:39527"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:145957",
+                    "name": "Poland Darts Masters 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:396490",
+                "name": "Humphries, Luke",
+                "abbreviation": "HUM",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 2,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 2,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 110.79,
+                        "checkout_percentage": 85.71,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 146,
+                        "scores_100s_plus": 9,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 4
+                    }
+                }, {
+                    "id": "sr:competitor:396490",
+                    "name": "Humphries, Luke",
+                    "abbreviation": "HUM",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 104.97,
+                        "checkout_percentage": 100,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 121,
+                        "scores_100s_plus": 10,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 4
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:42141571",
+            "start_time": "2023-07-07T19:35:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:39527",
+                    "name": "Poland Darts Masters 2023",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:103993",
+                    "name": "Poland Darts Masters 2023 2023",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023",
+                    "competition_id": "sr:competition:39527"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-07-07",
+                    "end_date": "2023-07-08",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_16"
+                },
+                "groups": [{
+                    "id": "sr:cup:145957",
+                    "name": "Poland Darts Masters 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:626108",
+                "name": "Gawlas, Adam",
+                "abbreviation": "GAW",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 3,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 3,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 98.48,
+                        "checkout_percentage": 46.15,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 67,
+                        "scores_100s_plus": 9,
+                        "scores_140s_plus": 2,
+                        "scores_180s": 5
+                    }
+                }, {
+                    "id": "sr:competitor:626108",
+                    "name": "Gawlas, Adam",
+                    "abbreviation": "GAW",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 90.77,
+                        "checkout_percentage": 37.5,
+                        "checkouts": 3,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 72,
+                        "scores_100s_plus": 9,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 4
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:42002615",
+            "start_time": "2023-07-01T18:35:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:24423",
+                    "name": "PDC European Tour - European Darts Matchplay",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:107041",
+                    "name": "PDC European Tour - European Darts Matchplay 2023",
+                    "start_date": "2023-06-30",
+                    "end_date": "2023-07-03",
+                    "year": "2023",
+                    "competition_id": "sr:competition:24423"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-06-30",
+                    "end_date": "2023-07-03",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_32"
+                },
+                "groups": [{
+                    "id": "sr:cup:149907",
+                    "name": "European Darts Matchplay"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26108",
+                "name": "van Barneveld, Raymond",
+                "abbreviation": "VAB",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 3,
+            "away_score": 6,
+            "winner_id": "sr:competitor:26108",
+            "period_scores": [{
+                "home_score": 3,
+                "away_score": 6,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 91.57,
+                        "checkout_percentage": 25,
+                        "checkouts": 3,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 66,
+                        "scores_100s_plus": 12,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 0
+                    }
+                }, {
+                    "id": "sr:competitor:26108",
+                    "name": "van Barneveld, Raymond",
+                    "abbreviation": "VAB",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 91.95,
+                        "checkout_percentage": 85.71,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 138,
+                        "scores_100s_plus": 8,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 3
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41543131",
+            "start_time": "2023-06-04T02:30:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:25469",
+                    "name": "PDC World Series of Darts - US Darts Masters",
+                    "parent_id": "sr:competition:2185",
+                    "gender": "mixed"
+                },
+                "season": {
+                    "id": "sr:season:105675",
+                    "name": "PDC World Series of Darts - US Darts Masters 2023",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023",
+                    "competition_id": "sr:competition:25469"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "final"
+                },
+                "groups": [{
+                    "id": "sr:cup:148537",
+                    "name": "US Darts Masters"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:180888",
+                "name": "Smith, Jeff",
+                "abbreviation": "SMI",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 8,
+            "away_score": 0,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 8,
+                "away_score": 0,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 91.09,
+                        "checkout_percentage": 44.44,
+                        "checkouts": 8,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 103,
+                        "scores_100s_plus": 10,
+                        "scores_140s_plus": 3,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:180888",
+                    "name": "Smith, Jeff",
+                    "abbreviation": "SMI",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 86.41,
+                        "checkout_percentage": 0,
+                        "checkouts": 0,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 0,
+                        "scores_100s_plus": 13,
+                        "scores_140s_plus": 3,
+                        "scores_180s": 0
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41543125",
+            "start_time": "2023-06-04T01:00:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:25469",
+                    "name": "PDC World Series of Darts - US Darts Masters",
+                    "parent_id": "sr:competition:2185",
+                    "gender": "mixed"
+                },
+                "season": {
+                    "id": "sr:season:105675",
+                    "name": "PDC World Series of Darts - US Darts Masters 2023",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023",
+                    "competition_id": "sr:competition:25469"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:148537",
+                    "name": "US Darts Masters"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:245555",
+                "name": "Cross, Rob",
+                "abbreviation": "CRO",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 7,
+            "away_score": 6,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 7,
+                "away_score": 6,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 99.78,
+                        "checkout_percentage": 38.89,
+                        "checkouts": 7,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 70,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:245555",
+                    "name": "Cross, Rob",
+                    "abbreviation": "CRO",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 102.13,
+                        "checkout_percentage": 35.29,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 170,
+                        "scores_100s_plus": 19,
+                        "scores_140s_plus": 11,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41543117",
+            "start_time": "2023-06-03T23:10:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:25469",
+                    "name": "PDC World Series of Darts - US Darts Masters",
+                    "parent_id": "sr:competition:2185",
+                    "gender": "mixed"
+                },
+                "season": {
+                    "id": "sr:season:105675",
+                    "name": "PDC World Series of Darts - US Darts Masters 2023",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023",
+                    "competition_id": "sr:competition:25469"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:148537",
+                    "name": "US Darts Masters"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:521418",
+                "name": "Long, Jim",
+                "abbreviation": "LON",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 2,
+            "away_score": 6,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 2,
+                "away_score": 6,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:521418",
+                    "name": "Long, Jim",
+                    "abbreviation": "LON",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 91.84,
+                        "checkout_percentage": 100,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 121,
+                        "scores_100s_plus": 12,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 1
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 96.71,
+                        "checkout_percentage": 66.67,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 112,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 3,
+                        "scores_180s": 1
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41545689",
+            "start_time": "2023-06-03T02:35:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:25469",
+                    "name": "PDC World Series of Darts - US Darts Masters",
+                    "parent_id": "sr:competition:2185",
+                    "gender": "mixed"
+                },
+                "season": {
+                    "id": "sr:season:105675",
+                    "name": "PDC World Series of Darts - US Darts Masters 2023",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023",
+                    "competition_id": "sr:competition:25469"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-06-02",
+                    "end_date": "2023-06-04",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_16"
+                },
+                "groups": [{
+                    "id": "sr:cup:148537",
+                    "name": "US Darts Masters"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:1016955",
+                "name": "Macmillan, Jake",
+                "abbreviation": "MAC",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 2,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 2,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 91.15,
+                        "checkout_percentage": 40,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 141,
+                        "scores_100s_plus": 5,
+                        "scores_140s_plus": 7,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:1016955",
+                    "name": "Macmillan, Jake",
+                    "abbreviation": "MAC",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 75.84,
+                        "checkout_percentage": 40,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 60,
+                        "scores_100s_plus": 7,
+                        "scores_140s_plus": 2,
+                        "scores_180s": 1
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39046449",
+            "start_time": "2023-05-25T20:00:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 2,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-24",
+                    "end_date": "2023-05-25",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "final"
+                },
+                "groups": [{
+                    "id": "sr:cup:143393",
+                    "name": "Premier League 2023, Playoffs"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:143420",
+                "name": "Price, Gerwyn",
+                "abbreviation": "PRI",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 5,
+            "away_score": 11,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 5,
+                "away_score": 11,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:143420",
+                    "name": "Price, Gerwyn",
+                    "abbreviation": "PRI",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 99.5,
+                        "checkout_percentage": 41.67,
+                        "checkouts": 5,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 161,
+                        "scores_100s_plus": 24,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 2
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 105.43,
+                        "checkout_percentage": 44,
+                        "checkouts": 11,
+                        "checkouts_100s_plus": 3,
+                        "highest_checkout": 170,
+                        "scores_100s_plus": 20,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 5
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39048485",
+            "start_time": "2023-05-25T19:05:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 2,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-24",
+                    "end_date": "2023-05-25",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:143393",
+                    "name": "Premier League 2023, Playoffs"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:35936",
+                "name": "Smith, Michael",
+                "abbreviation": "SMI",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 8,
+            "away_score": 10,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 8,
+                "away_score": 10,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:35936",
+                    "name": "Smith, Michael",
+                    "abbreviation": "SMI",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 97.9,
+                        "checkout_percentage": 57.14,
+                        "checkouts": 8,
+                        "checkouts_100s_plus": 3,
+                        "highest_checkout": 128,
+                        "scores_100s_plus": 23,
+                        "scores_140s_plus": 12,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 101.45,
+                        "checkout_percentage": 38.46,
+                        "checkouts": 10,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 100,
+                        "scores_100s_plus": 19,
+                        "scores_140s_plus": 12,
+                        "scores_180s": 7
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39046427",
+            "start_time": "2023-05-18T20:45:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-18",
+                    "end_date": "2023-05-18",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:143409",
+                    "name": "Premier League, Night 16"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:136790",
+                "name": "van den Bergh, Dimitri",
+                "abbreviation": "VDB",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "walkover",
+            "winner_id": "sr:competitor:136790"
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39048477",
+            "start_time": "2023-05-18T19:30:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-18",
+                    "end_date": "2023-05-18",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:143409",
+                    "name": "Premier League, Night 16"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:143410",
+                "name": "Dobey, Chris",
+                "abbreviation": "DOB",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 3,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 3,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 98.63,
+                        "checkout_percentage": 31.58,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 88,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 4
+                    }
+                }, {
+                    "id": "sr:competitor:143410",
+                    "name": "Dobey, Chris",
+                    "abbreviation": "DOB",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 92,
+                        "checkout_percentage": 20,
+                        "checkouts": 3,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 96,
+                        "scores_100s_plus": 15,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41202525",
+            "start_time": "2023-05-14T17:00:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27729",
+                    "name": "PDC European Tour - Czech Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:105103",
+                    "name": "PDC European Tour - Czech Darts Open 2023",
+                    "start_date": "2023-05-12",
+                    "end_date": "2023-05-14",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27729"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-12",
+                    "end_date": "2023-05-14",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:147523",
+                    "name": "Czech Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:245555",
+                "name": "Cross, Rob",
+                "abbreviation": "CRO",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 4,
+            "winner_id": "sr:competitor:245555",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 4,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:245555",
+                    "name": "Cross, Rob",
+                    "abbreviation": "CRO",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 94.91,
+                        "checkout_percentage": 46.15,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 113,
+                        "scores_100s_plus": 12,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 4
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 91.28,
+                        "checkout_percentage": 28.57,
+                        "checkouts": 4,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 40,
+                        "scores_100s_plus": 8,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41202549",
+            "start_time": "2023-05-14T11:35:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27729",
+                    "name": "PDC European Tour - Czech Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:105103",
+                    "name": "PDC European Tour - Czech Darts Open 2023",
+                    "start_date": "2023-05-12",
+                    "end_date": "2023-05-14",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27729"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-12",
+                    "end_date": "2023-05-14",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_16"
+                },
+                "groups": [{
+                    "id": "sr:cup:147523",
+                    "name": "Czech Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:868039",
+                "name": "Rock, Josh",
+                "abbreviation": "ROC",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 5,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 5,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 102.91,
+                        "checkout_percentage": 54.55,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 81,
+                        "scores_100s_plus": 7,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 2
+                    }
+                }, {
+                    "id": "sr:competitor:868039",
+                    "name": "Rock, Josh",
+                    "abbreviation": "ROC",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 103.31,
+                        "checkout_percentage": 38.46,
+                        "checkouts": 5,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 158,
+                        "scores_100s_plus": 9,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 7
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41202577",
+            "start_time": "2023-05-13T18:45:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27729",
+                    "name": "PDC European Tour - Czech Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:105103",
+                    "name": "PDC European Tour - Czech Darts Open 2023",
+                    "start_date": "2023-05-12",
+                    "end_date": "2023-05-14",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27729"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-12",
+                    "end_date": "2023-05-14",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_32"
+                },
+                "groups": [{
+                    "id": "sr:cup:147523",
+                    "name": "Czech Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:173482",
+                "name": "de Decker, Mike",
+                "abbreviation": "DECK",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 4,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 4,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 99.52,
+                        "checkout_percentage": 30,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 85,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 7,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:173482",
+                    "name": "de Decker, Mike",
+                    "abbreviation": "DECK",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 94.26,
+                        "checkout_percentage": 40,
+                        "checkouts": 4,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 97,
+                        "scores_100s_plus": 9,
+                        "scores_140s_plus": 8,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39048467",
+            "start_time": "2023-05-11T19:10:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-11",
+                    "end_date": "2023-05-11",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:143407",
+                    "name": "Premier League, Night 15"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:35936",
+                "name": "Smith, Michael",
+                "abbreviation": "SMI",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 4,
+            "away_score": 6,
+            "winner_id": "sr:competitor:35936",
+            "period_scores": [{
+                "home_score": 4,
+                "away_score": 6,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 95.8,
+                        "checkout_percentage": 21.05,
+                        "checkouts": 4,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 154,
+                        "scores_100s_plus": 12,
+                        "scores_140s_plus": 9,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:35936",
+                    "name": "Smith, Michael",
+                    "abbreviation": "SMI",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 94.13,
+                        "checkout_percentage": 42.86,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 130,
+                        "scores_100s_plus": 14,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 1
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41070595",
+            "start_time": "2023-05-07T20:10:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:31619",
+                    "name": "PDC European Tour - Belgian Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104917",
+                    "name": "PDC European Tour - Belgian Darts Open 2023",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023",
+                    "competition_id": "sr:competition:31619"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "final"
+                },
+                "groups": [{
+                    "id": "sr:cup:147261",
+                    "name": "PDC European Tour - Belgian Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:396490",
+                "name": "Humphries, Luke",
+                "abbreviation": "HUM",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 8,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 8,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:396490",
+                    "name": "Humphries, Luke",
+                    "abbreviation": "HUM",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 101.03,
+                        "checkout_percentage": 30,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 64,
+                        "scores_100s_plus": 20,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 6
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 99.69,
+                        "checkout_percentage": 61.54,
+                        "checkouts": 8,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 129,
+                        "scores_100s_plus": 18,
+                        "scores_140s_plus": 7,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41070597",
+            "start_time": "2023-05-07T19:30:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:31619",
+                    "name": "PDC European Tour - Belgian Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104917",
+                    "name": "PDC European Tour - Belgian Darts Open 2023",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023",
+                    "competition_id": "sr:competition:31619"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:147261",
+                    "name": "PDC European Tour - Belgian Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:868039",
+                "name": "Rock, Josh",
+                "abbreviation": "ROC",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 3,
+            "away_score": 7,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 3,
+                "away_score": 7,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:868039",
+                    "name": "Rock, Josh",
+                    "abbreviation": "ROC",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 95.32,
+                        "checkout_percentage": 50,
+                        "checkouts": 3,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 68,
+                        "scores_100s_plus": 13,
+                        "scores_140s_plus": 0,
+                        "scores_180s": 5
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 102.98,
+                        "checkout_percentage": 46.67,
+                        "checkouts": 7,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 126,
+                        "scores_100s_plus": 14,
+                        "scores_140s_plus": 9,
+                        "scores_180s": 0
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41070593",
+            "start_time": "2023-05-07T18:25:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:31619",
+                    "name": "PDC European Tour - Belgian Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104917",
+                    "name": "PDC European Tour - Belgian Darts Open 2023",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023",
+                    "competition_id": "sr:competition:31619"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:147261",
+                    "name": "PDC European Tour - Belgian Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26272",
+                "name": "Anderson, Gary",
+                "abbreviation": "AND",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 1,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 1,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 101.02,
+                        "checkout_percentage": 46.15,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 156,
+                        "scores_100s_plus": 5,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 4
+                    }
+                }, {
+                    "id": "sr:competitor:26272",
+                    "name": "Anderson, Gary",
+                    "abbreviation": "AND",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 81.84,
+                        "checkout_percentage": 11.11,
+                        "checkouts": 1,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 4,
+                        "scores_100s_plus": 4,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41070611",
+            "start_time": "2023-05-07T14:10:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:31619",
+                    "name": "PDC European Tour - Belgian Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104917",
+                    "name": "PDC European Tour - Belgian Darts Open 2023",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023",
+                    "competition_id": "sr:competition:31619"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_16"
+                },
+                "groups": [{
+                    "id": "sr:cup:147261",
+                    "name": "PDC European Tour - Belgian Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:163422",
+                "name": "Schindler, Martin",
+                "abbreviation": "SCH",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 5,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 5,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 97.06,
+                        "checkout_percentage": 40,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 108,
+                        "scores_100s_plus": 14,
+                        "scores_140s_plus": 8,
+                        "scores_180s": 1
+                    }
+                }, {
+                    "id": "sr:competitor:163422",
+                    "name": "Schindler, Martin",
+                    "abbreviation": "SCH",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 94.3,
+                        "checkout_percentage": 38.46,
+                        "checkouts": 5,
+                        "checkouts_100s_plus": 2,
+                        "highest_checkout": 120,
+                        "scores_100s_plus": 16,
+                        "scores_140s_plus": 3,
+                        "scores_180s": 5
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:41070559",
+            "start_time": "2023-05-06T19:30:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:31619",
+                    "name": "PDC European Tour - Belgian Darts Open",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104917",
+                    "name": "PDC European Tour - Belgian Darts Open 2023",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023",
+                    "competition_id": "sr:competition:31619"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-05",
+                    "end_date": "2023-05-07",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_32"
+                },
+                "groups": [{
+                    "id": "sr:cup:147261",
+                    "name": "PDC European Tour - Belgian Darts Open 2023"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:61058",
+                "name": "de Sousa, Jose",
+                "abbreviation": "DES",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 5,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 5,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 100.61,
+                        "checkout_percentage": 54.55,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 112,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 8,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:61058",
+                    "name": "de Sousa, Jose",
+                    "abbreviation": "DES",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 90.95,
+                        "checkout_percentage": 41.67,
+                        "checkouts": 5,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 100,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 4
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39045875",
+            "start_time": "2023-05-04T20:45:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-04",
+                    "end_date": "2023-05-04",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:143405",
+                    "name": "Premier League, Night 14"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:35936",
+                "name": "Smith, Michael",
+                "abbreviation": "SMI",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 4,
+            "winner_id": "sr:competitor:35936",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 4,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:35936",
+                    "name": "Smith, Michael",
+                    "abbreviation": "SMI",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 91.62,
+                        "checkout_percentage": 54.55,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 116,
+                        "scores_100s_plus": 12,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 1
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 99.4,
+                        "checkout_percentage": 33.33,
+                        "checkouts": 4,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 40,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 9,
+                        "scores_180s": 1
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:39048461",
+            "start_time": "2023-05-04T19:50:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:27230",
+                    "name": "Premier League",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:102259",
+                    "name": "Premier League 2023",
+                    "start_date": "2023-02-02",
+                    "end_date": "2023-05-25",
+                    "year": "2023",
+                    "competition_id": "sr:competition:27230"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-05-04",
+                    "end_date": "2023-05-04",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:143405",
+                    "name": "Premier League, Night 14"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:143420",
+                "name": "Price, Gerwyn",
+                "abbreviation": "PRI",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 2,
+            "away_score": 6,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 2,
+                "away_score": 6,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:143420",
+                    "name": "Price, Gerwyn",
+                    "abbreviation": "PRI",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 104.42,
+                        "checkout_percentage": 25,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 86,
+                        "scores_100s_plus": 7,
+                        "scores_140s_plus": 8,
+                        "scores_180s": 3
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 103.1,
+                        "checkout_percentage": 60,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 82,
+                        "scores_100s_plus": 6,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 5
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:40927223",
+            "start_time": "2023-04-30T19:00:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:24427",
+                    "name": "PDC European Tour - Dutch Darts Championship",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104655",
+                    "name": "PDC European Tour - Dutch Darts Championship 2023",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023",
+                    "competition_id": "sr:competition:24427"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "semifinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:146873",
+                    "name": "Dutch Darts Championship"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:46125",
+                "name": "Chisnall, Dave",
+                "abbreviation": "CHI",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 7,
+            "winner_id": "sr:competitor:46125",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 7,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 89.12,
+                        "checkout_percentage": 30,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 1,
+                        "highest_checkout": 170,
+                        "scores_100s_plus": 15,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 2
+                    }
+                }, {
+                    "id": "sr:competitor:46125",
+                    "name": "Chisnall, Dave",
+                    "abbreviation": "CHI",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 91.43,
+                        "checkout_percentage": 30.43,
+                        "checkouts": 7,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 40,
+                        "scores_100s_plus": 15,
+                        "scores_140s_plus": 10,
+                        "scores_180s": 3
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:40927169",
+            "start_time": "2023-04-30T17:00:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:24427",
+                    "name": "PDC European Tour - Dutch Darts Championship",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104655",
+                    "name": "PDC European Tour - Dutch Darts Championship 2023",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023",
+                    "competition_id": "sr:competition:24427"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "quarterfinal"
+                },
+                "groups": [{
+                    "id": "sr:cup:146873",
+                    "name": "Dutch Darts Championship"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:590259",
+                "name": "Barry, Keane",
+                "abbreviation": "BAR",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 2,
+            "away_score": 6,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 2,
+                "away_score": 6,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:590259",
+                    "name": "Barry, Keane",
+                    "abbreviation": "BAR",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 92.13,
+                        "checkout_percentage": 15.38,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 32,
+                        "scores_100s_plus": 8,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 0
+                    }
+                }, {
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 91.22,
+                        "checkout_percentage": 33.33,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 80,
+                        "scores_100s_plus": 9,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:40927183",
+            "start_time": "2023-04-30T11:30:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:24427",
+                    "name": "PDC European Tour - Dutch Darts Championship",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104655",
+                    "name": "PDC European Tour - Dutch Darts Championship 2023",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023",
+                    "competition_id": "sr:competition:24427"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_16"
+                },
+                "groups": [{
+                    "id": "sr:cup:146873",
+                    "name": "Dutch Darts Championship"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:163422",
+                "name": "Schindler, Martin",
+                "abbreviation": "SCH",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 2,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 2,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 97.4,
+                        "checkout_percentage": 75,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 3,
+                        "highest_checkout": 170,
+                        "scores_100s_plus": 12,
+                        "scores_140s_plus": 6,
+                        "scores_180s": 0
+                    }
+                }, {
+                    "id": "sr:competitor:163422",
+                    "name": "Schindler, Martin",
+                    "abbreviation": "SCH",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 91.17,
+                        "checkout_percentage": 18.18,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 90,
+                        "scores_100s_plus": 7,
+                        "scores_140s_plus": 4,
+                        "scores_180s": 2
+                    }
+                }]
+            }
+        }
+    }, {
+        "sport_event": {
+            "id": "sr:sport_event:40927205",
+            "start_time": "2023-04-29T19:05:00+00:00",
+            "start_time_confirmed": true,
+            "sport_event_context": {
+                "sport": {
+                    "id": "sr:sport:22",
+                    "name": "Darts"
+                },
+                "category": {
+                    "id": "sr:category:104",
+                    "name": "International"
+                },
+                "competition": {
+                    "id": "sr:competition:24427",
+                    "name": "PDC European Tour - Dutch Darts Championship",
+                    "parent_id": "sr:competition:1050",
+                    "gender": "men"
+                },
+                "season": {
+                    "id": "sr:season:104655",
+                    "name": "PDC European Tour - Dutch Darts Championship 2023",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023",
+                    "competition_id": "sr:competition:24427"
+                },
+                "stage": {
+                    "order": 1,
+                    "type": "cup",
+                    "phase": "playoffs",
+                    "start_date": "2023-04-28",
+                    "end_date": "2023-05-01",
+                    "year": "2023"
+                },
+                "round": {
+                    "name": "round_of_32"
+                },
+                "groups": [{
+                    "id": "sr:cup:146873",
+                    "name": "Dutch Darts Championship"
+                }],
+                "mode": {
+                    "best_of": 1
+                }
+            },
+            "coverage": {
+                "live": true
+            },
+            "competitors": [{
+                "id": "sr:competitor:26280",
+                "name": "van Gerwen, Michael",
+                "abbreviation": "VGE",
+                "qualifier": "home"
+            }, {
+                "id": "sr:competitor:286203",
+                "name": "Clemens, Gabriel",
+                "abbreviation": "CLE",
+                "qualifier": "away"
+            }]
+        },
+        "sport_event_status": {
+            "status": "closed",
+            "match_status": "ended",
+            "home_score": 6,
+            "away_score": 2,
+            "winner_id": "sr:competitor:26280",
+            "period_scores": [{
+                "home_score": 6,
+                "away_score": 2,
+                "type": "regular_period",
+                "number": 1
+            }]
+        },
+        "statistics": {
+            "totals": {
+                "competitors": [{
+                    "id": "sr:competitor:26280",
+                    "name": "van Gerwen, Michael",
+                    "abbreviation": "VGE",
+                    "qualifier": "home",
+                    "statistics": {
+                        "average_3_darts": 97.45,
+                        "checkout_percentage": 66.67,
+                        "checkouts": 6,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 72,
+                        "scores_100s_plus": 11,
+                        "scores_140s_plus": 5,
+                        "scores_180s": 1
+                    }
+                }, {
+                    "id": "sr:competitor:286203",
+                    "name": "Clemens, Gabriel",
+                    "abbreviation": "CLE",
+                    "qualifier": "away",
+                    "statistics": {
+                        "average_3_darts": 83.79,
+                        "checkout_percentage": 18.18,
+                        "checkouts": 2,
+                        "checkouts_100s_plus": 0,
+                        "highest_checkout": 40,
+                        "scores_100s_plus": 8,
+                        "scores_140s_plus": 3,
+                        "scores_180s": 3
+                    }
+                }]
+            }
+        }
+    }]
+}
