@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  height: 100%;
+  
+}
+
+:focus{
+  outline:none;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#dartboard-container {
+  position: relative;
+}
+
+#stat-form-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 10px;
+  color: #000; /* Text color */
+}
+
+
+
+
+.intro-container {
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 400px;
+  overflow: hidden;
+}
+
+.intro-scene {
+  flex: 1;
+  position: relative;
+}
+
+#threeCanvas {
+  width: 100%;
+  height: 100%;
+}
+#newSceneCanvas{
+  width: 100%;
+  height: 100%;
+}
+
+.intro-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+
+
+
+
+
+.clickable-event:hover {
+  background-color: #f0eeee88;
+}
+.centered-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.player-menu {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #00000055;
+  color: #fff;
+  border-radius: 17px;
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.player-menu option {
+  background-color: #00000055;
+  color: #fff;
+}
+
+
+#newSceneCanvas{
+  width: 100%;
+  height: 100%;
+}
+
+.selected-stat-container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 17px;
+  text-align: center;
+  position: relative;
+  top: 30px;
+  transform: translateY(-50%);
+  width: 100%; /* Take full width */
+  max-width: 400px; /* Set a maximum width */
+  margin-left: auto;
+  margin-right: auto;
+}
+.animateBtns{
+
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #00000055;
+  color: #fff;
+  border-radius: 17px;
+  text-align: center;
+  position: relative;
+  top: 70px;
+  width: 20%; /* Take full width */
+  max-width: 400px; /* Set a maximum width */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Additional CSS for form styling */
+#stat-form-container {
+  background-color: #000000;
+  color:#fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Add position */
+  top: 20px; /* Adjust top value as needed */
+}
+
+#statForm {
+  display: grid;
+  grid-gap: 10px;
+}
+
+#statForm label {
+  font-weight: bold;
+}
+
+#statForm input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#statForm button {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #00000055;
+  color: #fff;
+  border-radius: 17px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
